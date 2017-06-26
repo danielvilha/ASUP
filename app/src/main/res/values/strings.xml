@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Avaliação da sustentabilidade</string>
+
+    <string name="economic">Econômica</string>
+    <string name="environmental">Ambiental</string>
+    <string name="social">Social</string>
+</resources>
