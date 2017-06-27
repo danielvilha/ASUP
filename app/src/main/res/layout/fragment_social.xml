@@ -9,5 +9,248 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textViewSocial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/social"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSocialQues1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/quest_social_1"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="30dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="10dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSocialQuest1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest1A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest1_answer1" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest1B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest1_answer2" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest1C"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest1_answer3" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest1D"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest1_answer4" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSocialQues2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quest_social_2"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSocialQuest2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest2A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest2_answer1" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest2B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest2_answer2" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSocialQues3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quest_social_3"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupSocialQuest3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest3A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest3_answer1" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest3B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest3_answer2" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest3C"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest3_answer3" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest3D"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest3_answer4" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSocialQues4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quest_social_4"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQuest4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest4A"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest4_answer1" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonSocialQuest4B"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest4_answer2" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonQuest4C"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="@string/social_quest4_answer3" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </ScrollView>

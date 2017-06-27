@@ -6,9 +6,109 @@
 
     <string name="action_settings">Settings</string>
 
+    <string name="personal">Pessoal</string>
+    <string name="cooperative">Cooperativa</string>
+    <string name="company">Empresa</string>
     <string name="economic">Econômica</string>
     <string name="environmental">Ambiental</string>
     <string name="social">Social</string>
 
+
     <string name="toolbar_title_home">Home</string>
+
+    <!-- SOCIAL -->
+    <string name="quest_social_1">1) Sobre o relacionamento da empresa com seus funcionários assinale as políticas e/ou práticas que são realizadas:</string>
+    <string name="quest_social_2">2) A empresa incentiva a escolaridade dos funcionários:</string>
+    <string name="quest_social_3">3) A empresa emprega funcionários de diferentes:</string>
+    <string name="quest_social_4">4) Quantas horas de trabalho diário/funcionário:</string>
+
+    <!-- SOCIAL ANSWER -->
+    <string name="social_quest1_answer1">A) Combate ao trabalho infantil e/ou trabalho escravo, nas operações da empresa e em sua cadeia produtiva.</string>
+    <string name="social_quest1_answer2">B) Melhoria da qualidade de vida dos funcionários.</string>
+    <string name="social_quest1_answer3">C) Incentivo à diversidade e inclusão social no seu quadro funcional.</string>
+    <string name="social_quest1_answer4">D) Gestão de funcionários terceirizados.</string>
+
+    <string name="social_quest2_answer1">A) Sim.</string>
+    <string name="social_quest2_answer2">B) Não.</string>
+
+    <string name="social_quest3_answer1">A) Etnias.</string>
+    <string name="social_quest3_answer2">B) Gênero.</string>
+    <string name="social_quest3_answer3">C) Idade.</string>
+    <string name="social_quest3_answer4">D) Nacionalidade.</string>
+
+    <string name="social_quest4_answer1">A) 4 horas.</string>
+    <string name="social_quest4_answer2">B) 6 horas.</string>
+    <string name="social_quest4_answer3">C) 8 horas.</string>
+
+    <!-- ECONOMIC -->
+    <string name="quest_economic_1">1) Em relação ao sistema de produção:</string>
+    <string name="quest_economic_2">2) Comercialização da produção é realizada:</string>
+    <string name="quest_economic_3">3) Como o proprietário (empresário) administra seus bens:</string>
+    <string name="quest_economic_4">4) Valorização da mão de obra:</string>
+    <string name="quest_economic_5">5) Se tem acesso a crédito, de qual tipo:</string>
+
+    <!-- ECONOMIC ANSWER -->
+    <string name="economic_quest1_answer1">A) Extensivo.</string>
+    <string name="economic_quest1_answer2">B) Semi–intensivo.</string>
+    <string name="economic_quest1_answer3">C) Intensivo.</string>
+    <string name="economic_quest1_answer4">D) Super intensivo.</string>
+
+    <string name="economic_quest2_answer1">A) Intermediários (sistema de integração).</string>
+    <string name="economic_quest2_answer2">B) Direto ao consumidor (circuitos curtos de comercialização).</string>
+    <string name="economic_quest2_answer3">C) Através do Programa Nacional de Alimentação Escolar - PNAE e Programa de Aquisição de Alimentos - PAA.</string>
+
+    <string name="economic_quest3_answer1">A) Contador.</string>
+    <string name="economic_quest3_answer2">B) Proprietário.</string>
+    <string name="economic_quest3_answer3">C) Faz a separação dos custos e lucros dos cultivos.</string>
+
+    <string name="economic_quest4_answer1">A) Pró-labore.</string>
+    <string name="economic_quest4_answer2">B) Salário.</string>
+    <string name="economic_quest4_answer3">C) Porcentagem.</string>
+
+    <string name="economic_quest5_answer1">A) Investimento.</string>
+    <string name="economic_quest5_answer2">B) Custeio.</string>
+    <string name="economic_quest5_answer3">C) Comercialização.</string>
+
+    <!-- ENVIRONMENTAL -->
+    <string name="quest_environmental_1">1) Quais as licenças que o empreendimento possui:</string>
+    <string name="quest_environmental_2">2) Em relação a captação e abastecimento de água, ela é proveniente de:</string>
+    <string name="quest_environmental_3">3) Quais as iniciativas tomadas pela empresa para minimizar o impacto ambiental gerado por sua atuação:</string>
+    <string name="quest_environmental_4">4) Em relação aos Efluentes:</string>
+    <string name="quest_environmental_5">5) O empreendimento possui iniciativas para diminuir os impactos ou áreas impactadas:</string>
+
+    <!-- ENVIRONMENTAL ANSWER -->
+    <string name="environmental_quest1_alternative1">I - Licenciamento ambiental;</string>
+	<string name="environmental_quest1_alternative2">II - Outorga;</string>
+	<string name="environmental_quest1_alternative3">III - Cadastro Ambiental Rural – CAR;</string>
+	<string name="environmental_quest1_alternative4">IV - Registro geral da atividade pesqueira para aquicultura – RGP;</string>
+
+    <string name="environmental_quest1_answer1">A) Nenhuma das alternativas.</string>
+    <string name="environmental_quest1_answer2">B) Alternativa III.</string>
+    <string name="environmental_quest1_answer3">C) Alternativas I, II e III.</string>
+    <string name="environmental_quest1_answer4">D) Todas as alternativas.</string>
+
+    <string name="environmental_quest2_answer1">A) Nascente.</string>
+    <string name="environmental_quest2_answer2">B) Captação por poço artesiano.</string>
+    <string name="environmental_quest2_answer3">C) Captação pela rede de abastecimento público.</string>
+
+    <string name="environmental_quest3_alternative1">I. Redução, utilização e reciclagem de recursos;</string>
+	<string name="environmental_quest3_alternative2">II. Uso de fonte de energia renovável;</string>
+	<string name="environmental_quest3_alternative3">III. Redução do consumo de água;</string>
+	<string name="environmental_quest3_alternative4">IV. Redução da geração de resíduos sólidos;</string>
+
+    <string name="environmental_quest3_answer1">A) Nenhuma das alternativas.</string>
+    <string name="environmental_quest3_answer2">B) Uma alternativa.</string>
+    <string name="environmental_quest3_answer3">C) Duas alternativas.</string>
+    <string name="environmental_quest3_answer4">D) Três alternativas.</string>
+    <string name="environmental_quest3_answer5">E) Todas as alternativas.</string>
+
+    <string name="environmental_quest4_answer1">A) Utiliza sistema de recirculação – RAS.</string>
+    <string name="environmental_quest4_answer2">B) Utiliza sistema de bioflocos – BFT.</string>
+    <string name="environmental_quest4_answer3">C) Utiliza sistemas multitróficos.</string>
+    <string name="environmental_quest4_answer4">D) Utiliza sistemas convencionais c/ lançamento de efluentes sem tratamento (CONAMA).</string>
+    <string name="environmental_quest4_answer5">E) Utiliza sistemas convencionais c/ lançamento de efluentes com tratamento (CONAMA).</string>
+
+    <string name="environmental_quest5_answer1">A) Sim.</string>
+    <string name="environmental_quest5_answer2">B) Não.</string>
+
 </resources>

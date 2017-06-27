@@ -12,14 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="50"
-        android:background="@drawable/btn_home_economic"
+        android:background="@drawable/btn_home_personal"
         android:scaleType="centerCrop"
         android:padding="20dp"
         android:gravity="left|center_vertical"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="50sp"
         android:textStyle="bold"
-        android:text="@string/economic" />
+        android:text="@string/personal" />
 
     <Button
         android:id="@+id/buttonEnvironmental"
@@ -27,14 +27,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="50"
-        android:background="@drawable/btn_home_environmental"
+        android:background="@drawable/btn_home_cooperative"
         android:scaleType="centerCrop"
         android:padding="20dp"
         android:gravity="left|center_vertical"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
+        android:textSize="50sp"
         android:textStyle="bold"
-        android:text="@string/environmental" />
+        android:text="@string/cooperative" />
 
     <Button
         android:id="@+id/buttonSocial"
@@ -42,13 +42,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="50"
-        android:background="@drawable/btn_home_social"
+        android:background="@drawable/btn_home_company"
         android:scaleType="centerCrop"
-        android:textSize="20sp"
+        android:textSize="50sp"
         android:padding="20dp"
         android:gravity="left|center_vertical"
         android:textColor="@android:color/white"
         android:textStyle="bold"
-        android:text="@string/social" />
+        android:text="@string/company" />
 
 </LinearLayout>

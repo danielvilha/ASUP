@@ -1,5 +1,8 @@
 package com.danielvilha.asup.context.social.helper;
 
+import android.support.v7.widget.Toolbar;
+
+import com.danielvilha.asup.R;
 import com.danielvilha.asup.context.social.fragment.SocialFragment;
 import com.danielvilha.infra.mvc.base.helper.IViewHelper;
 

@@ -1,11 +1,13 @@
 package com.danielvilha.asup.context.social.fragment;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.danielvilha.asup.R;
+import com.danielvilha.asup.application.AndroidAdapter;
 import com.danielvilha.asup.context.social.helper.SocialViewHelper;
 import com.danielvilha.asup.context.social.model.SocialModel;
 import com.danielvilha.infra.mvc.annotations.FragmentModel;
@@ -24,6 +26,7 @@ public class SocialFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.rootLayout = inflater.inflate(R.layout.fragment_social, container, false);
         return super.rootLayout;
+
     }
 
     @Override
