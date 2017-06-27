@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">Avaliação da sustentabilidade</string>
 
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
     <string name="economic">Econômica</string>
     <string name="environmental">Ambiental</string>
     <string name="social">Social</string>
+
+    <string name="toolbar_title_home">Home</string>
 </resources>

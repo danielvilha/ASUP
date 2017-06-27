@@ -3,6 +3,13 @@ package com.danielvilha.asup.application;
 import android.app.Application;
 import android.content.Context;
 
+import com.danielvilha.asup.context.economic.eventlistener.OpenEconomicFragmentEventListener;
+import com.danielvilha.asup.context.environmental.eventlistener.OpenEnvironmentalFragmentEventListener;
+import com.danielvilha.asup.context.home.eventlistener.OpenHomeFragmentEventListener;
+import com.danielvilha.asup.context.social.eventlistener.OpenSocialFragmentEventListener;
+import com.danielvilha.infra.mvc.eventlistenerdispatcher.EventListenerDispatcher;
+import com.danielvilha.infra.util.PriorityEnum;
+
 /**
  * Created by scopus-dev on 26/06/17.
  */
@@ -68,14 +75,9 @@ public class AppApplication extends Application {
 //    }
 
     private void addAllEvents() {
-//        EventListenerDispatcher.getInstance().addEvent(new OpenHomeFragmentEventListener(), PriorityEnum.NORMAL);
-//        EventListenerDispatcher.getInstance().addEvent(new OpenTeamFragmentEventListener(), PriorityEnum.NORMAL);
-//        EventListenerDispatcher.getInstance().addEvent(new OpenAdjustmentsFragmentEventListener(), PriorityEnum.NORMAL);
-//        EventListenerDispatcher.getInstance().addEvent(new OpenManeuverabilityFragmentEventListener(), PriorityEnum.NORMAL);
-//        EventListenerDispatcher.getInstance().addEvent(new OpenRampFragmentEventListener(), PriorityEnum.NORMAL);
-//        EventListenerDispatcher.getInstance().addEvent(new OpenSpeedFragmentEventListener(), PriorityEnum.NORMAL);
-//        EventListenerDispatcher.getInstance().addEvent(new OpenTeamDetailFragmentEventListener(), PriorityEnum.NORMAL);
-//        EventListenerDispatcher.getInstance().addEvent(new OpenTrackFragmentEventListener(), PriorityEnum.NORMAL);
-//        EventListenerDispatcher.getInstance().addEvent(new OpenTractionFragmentEventListener(), PriorityEnum.NORMAL);
+        EventListenerDispatcher.getInstance().addEvent(new OpenHomeFragmentEventListener(), PriorityEnum.NORMAL);
+        EventListenerDispatcher.getInstance().addEvent(new OpenEconomicFragmentEventListener(), PriorityEnum.NORMAL);
+        EventListenerDispatcher.getInstance().addEvent(new OpenEnvironmentalFragmentEventListener(), PriorityEnum.NORMAL);
+        EventListenerDispatcher.getInstance().addEvent(new OpenSocialFragmentEventListener(), PriorityEnum.NORMAL);
     }
 }

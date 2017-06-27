@@ -36,8 +36,21 @@ public class HomeFragment extends BaseFragment {
     }
 
     @Override
-    public void reloadView() {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         super.viewHelper = new HomeViewHelper(HomeFragment.this);
+    }
+
+    @Override
+    public void reloadView() {
+        super.handler.post(new Runnable() {
+
+            @Override
+            public void run() {
+                HomeFragment.super.viewHelper = new HomeViewHelper(HomeFragment.this);
+            }
+        });
+        //super.viewHelper = new HomeViewHelper(HomeFragment.this);
     }
 
     @Override
@@ -58,7 +71,7 @@ public class HomeFragment extends BaseFragment {
     }
 
     @Override
-    public void update(Observable observable, Object o) {
-
+    public void update(Observable observable, Object arg) {
+        super.viewHelper = new HomeViewHelper(HomeFragment.this);
     }
 }
