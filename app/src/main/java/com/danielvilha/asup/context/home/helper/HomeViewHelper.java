@@ -13,15 +13,15 @@ import com.danielvilha.infra.mvc.event.VoidEventData;
 import com.danielvilha.infra.mvc.eventlistenerdispatcher.EventListenerDispatcher;
 
 /**
- * Created by scopus-dev on 26/06/17.
+ * Created by Daniel Vilha 26/06/17.
  */
 
 public class HomeViewHelper implements IViewHelper {
 
     private HomeFragment fragment;
-    private Button buttonHomeEconomic;
-    private Button buttonHomeEnvironmental;
-    private Button buttonHomeSocial;
+    private Button buttonHomeCompany;
+    private Button buttonHomeCooperative;
+    private Button buttonHomePersonal;
 
 
     public HomeViewHelper(HomeFragment fragment) {
@@ -33,33 +33,33 @@ public class HomeViewHelper implements IViewHelper {
 
     @Override
     public void findViewsById() {
-        buttonHomeEconomic = (Button) fragment.getRootLayout().findViewById(R.id.buttonEconomic);
-        buttonHomeEnvironmental = (Button) fragment.getRootLayout().findViewById(R.id.buttonEnvironmental);
-        buttonHomeSocial = (Button) fragment.getRootLayout().findViewById(R.id.buttonSocial);
+        buttonHomeCompany = (Button) fragment.getRootLayout().findViewById(R.id.buttonCompany);
+        buttonHomeCooperative = (Button) fragment.getRootLayout().findViewById(R.id.buttonCooperative);
+        buttonHomePersonal = (Button) fragment.getRootLayout().findViewById(R.id.buttonPersonal);
     }
 
     @Override
     public void setListeners() {
-        buttonHomeEconomic.setOnClickListener(new View.OnClickListener() {
+        buttonHomeCompany.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VoidEventData event = new VoidEventData(EventsEnum.OPEN_ECONOMIC_FRAGMENT, null, fragment.getActivity());
+                VoidEventData event = new VoidEventData(EventsEnum.OPEN_COMPANY_FRAGMENT, null, fragment.getActivity());
                 EventListenerDispatcher.getInstance().dispatch(event);
             }
         });
 
-        buttonHomeEnvironmental.setOnClickListener(new View.OnClickListener() {
+        buttonHomeCooperative.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VoidEventData event = new VoidEventData(EventsEnum.OPEN_ENVIRONMENTAL_FRAGMENT, null, fragment.getActivity());
+                VoidEventData event = new VoidEventData(EventsEnum.OPEN_COOPERATIVE_FRAGMENT, null, fragment.getActivity());
                 EventListenerDispatcher.getInstance().dispatch(event);
             }
         });
 
-        buttonHomeSocial.setOnClickListener(new View.OnClickListener() {
+        buttonHomePersonal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VoidEventData event = new VoidEventData(EventsEnum.OPEN_SOCIAL_FRAGMENT, null, fragment.getActivity());
+                VoidEventData event = new VoidEventData(EventsEnum.OPEN_PERSONAL_FRAGMENT, null, fragment.getActivity());
                 EventListenerDispatcher.getInstance().dispatch(event);
             }
         });

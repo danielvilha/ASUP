@@ -1,13 +1,14 @@
 package com.danielvilha.asup.enums;
 
 /**
- * Created by scopus-dev on 26/06/17.
+ * Created by Daniel Vilha 26/06/17.
  */
 
 public enum EventsEnum {
 
     OPEN_HOME_FRAGMENT,
-    OPEN_ECONOMIC_FRAGMENT,
-    OPEN_ENVIRONMENTAL_FRAGMENT,
-    OPEN_SOCIAL_FRAGMENT
+    OPEN_COMPANY_FRAGMENT,
+    OPEN_COOPERATIVE_FRAGMENT,
+    OPEN_PERSONAL_FRAGMENT,
+    OPEN_REPORT_FRAGMENT
 }

@@ -5,9 +5,10 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,7 +18,7 @@
 
 
             <TextView
-                android:id="@+id/textViewSocial"
+                android:id="@+id/textViewEnvironmental"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -416,7 +417,7 @@
 
 
             <TextView
-                android:id="@+id/textViewSocial"
+                android:id="@+id/textViewEconomic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -630,7 +631,7 @@
                     android:paddingTop="10dp">
 
                     <RadioGroup
-                        android:id="@+id/radioGroupEconomicQuest3"
+                        android:id="@+id/radioGroupEconomicQuest4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -687,7 +688,7 @@
                     android:paddingTop="10dp">
 
                     <RadioGroup
-                        android:id="@+id/radioGroupEconomicQuest4"
+                        android:id="@+id/radioGroupEconomicQuest5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -935,7 +936,7 @@
                     android:paddingTop="10dp">
 
                     <RadioGroup
-                        android:id="@+id/radioGroupQuest4"
+                        android:id="@+id/radioGroupSocialQuest4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -966,5 +967,14 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonSave"
+            style="@android:style/Widget.Material.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_save"
+            android:text="@string/save" />
     </LinearLayout>
 </ScrollView>

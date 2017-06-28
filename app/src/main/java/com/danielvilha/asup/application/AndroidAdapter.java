@@ -2,8 +2,10 @@ package com.danielvilha.asup.application;
 
 import android.content.Context;
 
+import com.danielvilha.asup.common.entity.DaoSession;
+
 /**
- * Created by scopus-dev on 26/06/17.
+ * Created by Daniel Vilha 26/06/17.
  */
 
 public class AndroidAdapter {
@@ -12,7 +14,7 @@ public class AndroidAdapter {
         return AppApplication.getContext();
     }
 
-//    public static DaoSession getDaoSession() {
-//        return AppApplication.getDaoSession();
-//    }
+    public static DaoSession getDaoSession() {
+        return AppApplication.getDaoSession();
+    }
 }

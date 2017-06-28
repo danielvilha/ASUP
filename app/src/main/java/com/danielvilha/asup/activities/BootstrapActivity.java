@@ -96,6 +96,11 @@ public class BootstrapActivity extends AppCompatActivity implements NavigationVi
                 event = new VoidEventData(EventsEnum.OPEN_HOME_FRAGMENT, null, BootstrapActivity.this);
                 EventListenerDispatcher.getInstance().dispatch(event);
                 break;
+            case R.id.nav_report:
+                this.toolbar.setTitle(R.string.toolbar_title_report);
+                event = new VoidEventData(EventsEnum.OPEN_REPORT_FRAGMENT, null, BootstrapActivity.this);
+                EventListenerDispatcher.getInstance().dispatch(event);
+                break;
         }
 
         this.drawer.closeDrawer(GravityCompat.START);

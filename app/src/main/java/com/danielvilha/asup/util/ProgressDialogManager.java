@@ -4,7 +4,7 @@ import android.app.ProgressDialog;
 import android.support.v4.app.Fragment;
 
 /**
- * Created by scopus-dev on 26/06/17.
+ * Created by Daniel Vilha 26/06/17.
  */
 
 public class ProgressDialogManager {

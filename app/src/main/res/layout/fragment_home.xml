@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/buttonEconomic"
+        android:id="@+id/buttonPersonal"
         style="@android:style/Widget.Material.Button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -22,7 +22,7 @@
         android:text="@string/personal" />
 
     <Button
-        android:id="@+id/buttonEnvironmental"
+        android:id="@+id/buttonCooperative"
         style="@android:style/Widget.Material.Button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -37,7 +37,7 @@
         android:text="@string/cooperative" />
 
     <Button
-        android:id="@+id/buttonSocial"
+        android:id="@+id/buttonCompany"
         style="@android:style/Widget.Material.Button"
         android:layout_width="match_parent"
         android:layout_height="0dp"

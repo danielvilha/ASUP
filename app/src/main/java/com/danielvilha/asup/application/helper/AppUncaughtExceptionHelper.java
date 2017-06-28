@@ -8,7 +8,7 @@ import android.content.Intent;
 import com.danielvilha.asup.activities.BootstrapActivity;
 
 /**
- * Created by scopus-dev on 26/06/17.
+ * Created by Daniel Vilha 26/06/17.
  */
 
 public class AppUncaughtExceptionHelper {

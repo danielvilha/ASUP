@@ -14,7 +14,7 @@ import com.danielvilha.infra.mvc.base.BaseFragment;
 import java.util.Observable;
 
 /**
- * Created by scopus-dev on 26/06/17.
+ * Created by Daniel Vilha 26/06/17.
  */
 @FragmentModel(path="com.danielvilha.asup.context.home.model.HomeModel")
 public class HomeFragment extends BaseFragment {

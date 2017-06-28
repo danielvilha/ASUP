@@ -3,20 +3,25 @@ package com.danielvilha.asup.application;
 import android.app.Application;
 import android.content.Context;
 
-import com.danielvilha.asup.context.economic.eventlistener.OpenEconomicFragmentEventListener;
-import com.danielvilha.asup.context.environmental.eventlistener.OpenEnvironmentalFragmentEventListener;
+import com.danielvilha.asup.common.entity.DaoMaster;
+import com.danielvilha.asup.common.entity.DaoSession;
+import com.danielvilha.asup.context.company.eventlistener.OpenCompanyFragmentEventListener;
+import com.danielvilha.asup.context.cooperative.eventlistener.OpenCooperativeFragmentEventListener;
 import com.danielvilha.asup.context.home.eventlistener.OpenHomeFragmentEventListener;
-import com.danielvilha.asup.context.social.eventlistener.OpenSocialFragmentEventListener;
+import com.danielvilha.asup.context.personal.eventlistener.OpenPersonalFragmentEventListener;
+import com.danielvilha.asup.context.report.eventlistener.OpenReportFragmentEventListener;
 import com.danielvilha.infra.mvc.eventlistenerdispatcher.EventListenerDispatcher;
 import com.danielvilha.infra.util.PriorityEnum;
 
+import org.greenrobot.greendao.database.Database;
+
 /**
- * Created by scopus-dev on 26/06/17.
+ * Created by Daniel Vilha 26/06/17.
  */
 
 public class AppApplication extends Application {
 
-//    private static DaoSession daoSession;
+    private static DaoSession daoSession;
     public static final boolean ENCRYPTED = false;
 
     public static AppApplication context;
@@ -33,9 +38,9 @@ public class AppApplication extends Application {
 
         context = this;
 
-//        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this,ENCRYPTED ? "exam-db-encrypted" : "exam-db");
-//        Database db = ENCRYPTED ? helper.getEncryptedWritableDb("exam-secret") : helper.getWritableDb();
-//        daoSession = new DaoMaster(db).newSession();
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this,ENCRYPTED ? "exam-db-encrypted" : "exam-db");
+        Database db = ENCRYPTED ? helper.getEncryptedWritableDb("exam-secret") : helper.getWritableDb();
+        daoSession = new DaoMaster(db).newSession();
 
         this.addAllEvents();
     }
@@ -59,7 +64,7 @@ public class AppApplication extends Application {
     /**
      * Retorna o contexto da aplicacao
      *
-     * @return
+     * @return context
      */
     public static Context getContext(){
         return context;
@@ -68,16 +73,17 @@ public class AppApplication extends Application {
     /**
      * Retorna o sessão do banco de dados
      *
-     * @return
+     * @return daoSession
      */
-//    public static DaoSession getDaoSession() {
-//        return daoSession;
-//    }
+    public static DaoSession getDaoSession() {
+        return daoSession;
+    }
 
     private void addAllEvents() {
         EventListenerDispatcher.getInstance().addEvent(new OpenHomeFragmentEventListener(), PriorityEnum.NORMAL);
-        EventListenerDispatcher.getInstance().addEvent(new OpenEconomicFragmentEventListener(), PriorityEnum.NORMAL);
-        EventListenerDispatcher.getInstance().addEvent(new OpenEnvironmentalFragmentEventListener(), PriorityEnum.NORMAL);
-        EventListenerDispatcher.getInstance().addEvent(new OpenSocialFragmentEventListener(), PriorityEnum.NORMAL);
+        EventListenerDispatcher.getInstance().addEvent(new OpenCompanyFragmentEventListener(), PriorityEnum.NORMAL);
+        EventListenerDispatcher.getInstance().addEvent(new OpenCooperativeFragmentEventListener(), PriorityEnum.NORMAL);
+        EventListenerDispatcher.getInstance().addEvent(new OpenPersonalFragmentEventListener(), PriorityEnum.NORMAL);
+        EventListenerDispatcher.getInstance().addEvent(new OpenReportFragmentEventListener(), PriorityEnum.NORMAL);
     }
 }
