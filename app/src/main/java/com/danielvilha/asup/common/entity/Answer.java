@@ -10,9 +10,79 @@ import org.greenrobot.greendao.annotation.Generated;
 @Entity
 public class Answer {
 
+    @Id(autoincrement = true)
+    private Long id;
+
     private int answer;
+
     private float value;
+
     private int questionNumber;
 
+    private String type;
 
+    private Long quizId;
+
+    @Generated(hash = 1517626561)
+    public Answer(Long id, int answer, float value, int questionNumber, String type,
+            Long quizId) {
+        this.id = id;
+        this.answer = answer;
+        this.value = value;
+        this.questionNumber = questionNumber;
+        this.type = type;
+        this.quizId = quizId;
+    }
+
+    @Generated(hash = 53889439)
+    public Answer() {
+    }
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getAnswer() {
+        return this.answer;
+    }
+
+    public void setAnswer(int answer) {
+        this.answer = answer;
+    }
+
+    public float getValue() {
+        return this.value;
+    }
+
+    public void setValue(float value) {
+        this.value = value;
+    }
+
+    public int getQuestionNumber() {
+        return this.questionNumber;
+    }
+
+    public void setQuestionNumber(int questionNumber) {
+        this.questionNumber = questionNumber;
+    }
+
+    public String getType() {
+        return this.type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Long getQuizId() {
+        return this.quizId;
+    }
+
+    public void setQuizId(Long quizId) {
+        this.quizId = quizId;
+    }
 }

@@ -38,8 +38,8 @@ public class AppApplication extends Application {
 
         context = this;
 
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this,ENCRYPTED ? "exam-db-encrypted" : "exam-db");
-        Database db = ENCRYPTED ? helper.getEncryptedWritableDb("exam-secret") : helper.getWritableDb();
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this,ENCRYPTED ? "asup-db-encrypted" : "asup-db");
+        Database db = ENCRYPTED ? helper.getEncryptedWritableDb("asup-secret") : helper.getWritableDb();
         daoSession = new DaoMaster(db).newSession();
 
         this.addAllEvents();

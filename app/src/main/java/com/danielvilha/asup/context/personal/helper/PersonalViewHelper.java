@@ -12,20 +12,21 @@ import com.danielvilha.asup.application.AndroidAdapter;
 import com.danielvilha.asup.common.controller.EconomicController;
 import com.danielvilha.asup.common.controller.EnvironmentalController;
 import com.danielvilha.asup.common.controller.SocialController;
+import com.danielvilha.asup.common.entity.Answer;
+import com.danielvilha.asup.common.entity.AnswerDao;
 import com.danielvilha.asup.common.entity.DaoSession;
-import com.danielvilha.asup.common.entity.Economic;
-import com.danielvilha.asup.common.entity.Environmental;
-import com.danielvilha.asup.common.entity.Personal;
-import com.danielvilha.asup.common.entity.PersonalDao;
-import com.danielvilha.asup.common.entity.Social;
+import com.danielvilha.asup.common.entity.Quiz;
+import com.danielvilha.asup.common.entity.QuizDao;
 import com.danielvilha.asup.context.personal.fragment.PersonalFragment;
 import com.danielvilha.asup.enums.EventsEnum;
+import com.danielvilha.asup.enums.QuizType;
 import com.danielvilha.infra.mvc.base.helper.IViewHelper;
 import com.danielvilha.infra.mvc.event.VoidEventData;
 import com.danielvilha.infra.mvc.eventlistenerdispatcher.EventListenerDispatcher;
 
+import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Daniel Vilha 28/06/17.
@@ -98,24 +99,27 @@ public class PersonalViewHelper implements IViewHelper {
                         if (soController.isValid()) {
                             DaoSession daoSession = AndroidAdapter.getDaoSession();
 
-                            Environmental environmental = new Environmental();
-                            environmental.__setDaoSession(daoSession);
-                            environmental.getAnswers().addAll(enController.getAnsers());
+                            Quiz quiz = new Quiz();
+                            quiz.setDate(Calendar.getInstance().getTime());
+                            quiz.setType(QuizType.PERSONAL.toString());
 
-                            Economic economic = new Economic();
-                            economic.getAnswers().addAll(ecController.getAnsers());
+                            QuizDao dao = daoSession.getQuizDao();
+                            dao.insert(quiz);
 
-                            Social social = new Social();
-                            social.getAnswers().addAll(soController.getAnsers());
+                            List<Answer> answers = new ArrayList<Answer>();
+                            answers.addAll(soController.getAnsers(quiz.getId()));
+                            answers.addAll(enController.getAnsers(quiz.getId()));
+                            answers.addAll(ecController.getAnsers(quiz.getId()));
 
-                            Personal personal = new Personal();
-                            personal.setDate(Calendar.getInstance().getTime());
-                            personal.setEconomic(economic);
-                            personal.setEnvironmental(environmental);
-                            personal.setSocial(social);
+                            AnswerDao answerDao = daoSession.getAnswerDao();
 
-                            PersonalDao dao = daoSession.getPersonalDao();
-                            dao.insert(personal);
+                            for (Answer item: answers) {
+                                answerDao.insert(item);
+                            }
+
+                            quiz.getAnswers().addAll(answers);
+
+                            dao.update(quiz);
 
                             Toast.makeText(AndroidAdapter.getContext(), "Formulário salvo com sucesso.", Toast.LENGTH_SHORT).show();
                             VoidEventData event = new VoidEventData(EventsEnum.OPEN_HOME_FRAGMENT, null, fragment.getActivity());

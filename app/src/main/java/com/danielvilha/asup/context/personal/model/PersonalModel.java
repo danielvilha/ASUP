@@ -1,6 +1,5 @@
 package com.danielvilha.asup.context.personal.model;
 
-import com.danielvilha.asup.common.entity.Personal;
 import com.danielvilha.infra.mvc.base.BaseFragmentModel;
 
 /**
@@ -9,13 +8,4 @@ import com.danielvilha.infra.mvc.base.BaseFragmentModel;
 
 public class PersonalModel extends BaseFragmentModel {
 
-    private Personal personal;
-
-    public Personal getPersonal() {
-        return personal;
-    }
-
-    public void setPersonal(Personal personal) {
-        this.personal = personal;
-    }
 }

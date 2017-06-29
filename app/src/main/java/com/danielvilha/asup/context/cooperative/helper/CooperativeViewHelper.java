@@ -12,19 +12,21 @@ import com.danielvilha.asup.application.AndroidAdapter;
 import com.danielvilha.asup.common.controller.EconomicController;
 import com.danielvilha.asup.common.controller.EnvironmentalController;
 import com.danielvilha.asup.common.controller.SocialController;
-import com.danielvilha.asup.common.entity.Cooperative;
-import com.danielvilha.asup.common.entity.CooperativeDao;
+import com.danielvilha.asup.common.entity.Answer;
+import com.danielvilha.asup.common.entity.AnswerDao;
 import com.danielvilha.asup.common.entity.DaoSession;
-import com.danielvilha.asup.common.entity.Economic;
-import com.danielvilha.asup.common.entity.Environmental;
-import com.danielvilha.asup.common.entity.Social;
+import com.danielvilha.asup.common.entity.Quiz;
+import com.danielvilha.asup.common.entity.QuizDao;
 import com.danielvilha.asup.context.cooperative.fragment.CooperativeFragment;
 import com.danielvilha.asup.enums.EventsEnum;
+import com.danielvilha.asup.enums.QuizType;
 import com.danielvilha.infra.mvc.base.helper.IViewHelper;
 import com.danielvilha.infra.mvc.event.VoidEventData;
 import com.danielvilha.infra.mvc.eventlistenerdispatcher.EventListenerDispatcher;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 /**
  * Created by Daniel Vilha 28/06/17.
@@ -95,24 +97,29 @@ public class CooperativeViewHelper implements IViewHelper {
                 if (enController.isValid()) {
                     if (ecController.isValid()) {
                         if (soController.isValid()) {
-                            Environmental environmental = new Environmental();
-                            environmental.getAnswers().addAll(enController.getAnsers());
-
-                            Economic economic = new Economic();
-                            economic.getAnswers().addAll(ecController.getAnsers());
-
-                            Social social = new Social();
-                            social.getAnswers().addAll(soController.getAnsers());
-
-                            Cooperative cooperative = new Cooperative();
-                            cooperative.setDate(Calendar.getInstance().getTime());
-                            cooperative.setEconomic(economic);
-                            cooperative.setEnvironmental(environmental);
-                            cooperative.setSocial(social);
-
                             DaoSession daoSession = AndroidAdapter.getDaoSession();
-                            CooperativeDao dao = daoSession.getCooperativeDao();
-                            dao.insert(cooperative);
+
+                            Quiz quiz = new Quiz();
+                            quiz.setDate(Calendar.getInstance().getTime());
+                            quiz.setType(QuizType.COOPERATIVE.toString());
+
+                            QuizDao dao = daoSession.getQuizDao();
+                            dao.insert(quiz);
+
+                            List<Answer> answers = new ArrayList<Answer>();
+                            answers.addAll(soController.getAnsers(quiz.getId()));
+                            answers.addAll(enController.getAnsers(quiz.getId()));
+                            answers.addAll(ecController.getAnsers(quiz.getId()));
+
+                            AnswerDao answerDao = daoSession.getAnswerDao();
+
+                            for (Answer item: answers) {
+                                answerDao.insert(item);
+                            }
+
+                            quiz.getAnswers().addAll(answers);
+
+                            dao.update(quiz);
 
                             Toast.makeText(AndroidAdapter.getContext(), "Formulário salvo com sucesso.", Toast.LENGTH_SHORT).show();
                             VoidEventData event = new VoidEventData(EventsEnum.OPEN_HOME_FRAGMENT, null, fragment.getActivity());
