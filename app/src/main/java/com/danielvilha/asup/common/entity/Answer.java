@@ -15,7 +15,7 @@ public class Answer {
 
     private int answer;
 
-    private float value;
+    private double value;
 
     private int questionNumber;
 
@@ -23,9 +23,9 @@ public class Answer {
 
     private Long quizId;
 
-    @Generated(hash = 1517626561)
-    public Answer(Long id, int answer, float value, int questionNumber, String type,
-            Long quizId) {
+    @Generated(hash = 43927468)
+    public Answer(Long id, int answer, double value, int questionNumber,
+            String type, Long quizId) {
         this.id = id;
         this.answer = answer;
         this.value = value;
@@ -54,11 +54,11 @@ public class Answer {
         this.answer = answer;
     }
 
-    public float getValue() {
+    public double getValue() {
         return this.value;
     }
 
-    public void setValue(float value) {
+    public void setValue(double value) {
         this.value = value;
     }
 

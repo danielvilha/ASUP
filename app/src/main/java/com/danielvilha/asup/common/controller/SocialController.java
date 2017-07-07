@@ -5,6 +5,7 @@ import android.widget.RadioGroup;
 
 import com.danielvilha.asup.common.entity.Answer;
 import com.danielvilha.asup.enums.AnswerType;
+import com.danielvilha.asup.util.UtilManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,28 +63,28 @@ public class SocialController {
 
         a1.setAnswer(idx1);
         a1.setQuestionNumber(1);
-        a1.setValue((4-idx1)/4);
+        a1.setValue(UtilManager.calcValue(4, idx1));
         a1.setQuizId(quizId);
         a1.setType(AnswerType.SOCIAL.toString());
         answers.add(a1);
 
         a2.setAnswer(idx2);
         a2.setQuestionNumber(2);
-        a2.setValue((2-idx2)/2);
+        a2.setValue(UtilManager.calcValue(2, idx2));
         a2.setQuizId(quizId);
         a2.setType(AnswerType.SOCIAL.toString());
         answers.add(a2);
 
         a3.setAnswer(idx3);
         a3.setQuestionNumber(3);
-        a3.setValue((4-idx3)/4);
+        a3.setValue(UtilManager.calcValue(4, idx3));
         a3.setQuizId(quizId);
         a3.setType(AnswerType.SOCIAL.toString());
         answers.add(a3);
 
         a4.setAnswer(idx4);
         a4.setQuestionNumber(4);
-        a4.setValue((3-idx4)/3);
+        a4.setValue(UtilManager.calcValue(3, idx4));
         a4.setQuizId(quizId);
         a4.setType(AnswerType.SOCIAL.toString());
         answers.add(a4);

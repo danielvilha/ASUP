@@ -5,6 +5,7 @@ import android.widget.RadioGroup;
 
 import com.danielvilha.asup.common.entity.Answer;
 import com.danielvilha.asup.enums.AnswerType;
+import com.danielvilha.asup.util.UtilManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,35 +70,35 @@ public class EnvironmentalController {
 
         a1.setAnswer(idx1);
         a1.setQuestionNumber(1);
-        a1.setValue((4-idx1)/4);
+        a1.setValue(UtilManager.calcValue(4, idx1));
         a1.setQuizId(quizId);
         a1.setType(AnswerType.ENVIRONMENTAL.toString());
         answers.add(a1);
 
         a2.setAnswer(idx2);
         a2.setQuestionNumber(2);
-        a2.setValue((3-idx2)/3);
+        a2.setValue(UtilManager.calcValue(3, idx2));
         a2.setQuizId(quizId);
         a2.setType(AnswerType.ENVIRONMENTAL.toString());
         answers.add(a2);
 
         a3.setAnswer(idx3);
         a3.setQuestionNumber(3);
-        a3.setValue((5-idx3)/5);
+        a3.setValue(UtilManager.calcValue(5, idx3));
         a3.setQuizId(quizId);
         a3.setType(AnswerType.ENVIRONMENTAL.toString());
         answers.add(a3);
 
         a4.setAnswer(idx4);
         a4.setQuestionNumber(4);
-        a4.setValue((5-idx4)/5);
+        a4.setValue(UtilManager.calcValue(5, idx4));
         a4.setQuizId(quizId);
         a4.setType(AnswerType.ENVIRONMENTAL.toString());
         answers.add(a4);
 
         a5.setAnswer(idx5);
         a5.setQuestionNumber(5);
-        a5.setValue((2-idx5)/2);
+        a5.setValue(UtilManager.calcValue(2, idx5));
         a5.setQuizId(quizId);
         a5.setType(AnswerType.ENVIRONMENTAL.toString());
         answers.add(a5);
